@@ -1,0 +1,22 @@
+ALGORITHM checkpointalgo ; 
+VAR 
+str : STRING  ;  
+nb_word , nb_vow : INTEGER ; 
+   
+BEGIN
+   Read ( str)
+   (str.length)
+   repeat(read(str))
+   until(str.length-1)="."
+   ( for i from 1 to (str.length) do )
+   if str[i]= ' ' then 
+   nb_word = nb_word+1 ; 
+   end_if 
+   if str[i] in ( 'a' , 'e' , 'i' , 'o' 'u' , 'y') then 
+   nb_vow= nb_vow+1 ;  
+   end_if
+   end_for
+   write ( str.length) ;
+   write (nb_word) ;
+   write (nb_vow) ;
+END
